@@ -4,14 +4,13 @@
 //For example, 1997 is not a leap year, but 1996 is. 1900 is not a leap year, but 2000 is.
 function isLeapYear(year){
 
-	if ( year%4 !== 0 ){
-		return false
+    if ( year%4 === 0 ){
+	if ( year%100 !== 0)
+            return true
+        else if ( year%100 === 0 && year%400 === 0 )
+            return true
 	}
-	else{
-		if ( year%100 === 0 && year%400 === 0)
-			return true
-	}
-	return false
+    return false
 }
 
 
